@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+body{
+  margin: 0;
+  font-family : Stylish;
+}
+
+a{
+  text-decoration : none;
+  color : #212121
+}
+
+.head, .head_profile{
+  width : 80%;
+  display : flex;
+  justify-content : center;
+  align-items : center;
+}
+
+.head_profile{
+	margin : 25px;
+}
+.head_logo{
+	font-size : 2em;	
+	padding : 30px;
+}
+.head_search{
+	width : 200px;
+	padding : 50px;
+}
+.head_icons{
+	width : 200px;
+	display : flex;
+	list-style : none;
+	justify-content : space-around;
+	padding : 50px;
+	size : 7x;
+}
+.img_profile{
+   width: 150px;
+   height: 150px; 
+   border-radius: 70%;
+   overflow: hidden;
+}
+.name{
+	padding : 0, 30px;
+	font-size : 1.5em;
+	align-items : flex-start;
+	justify-content : center;
+	margin-left: 3em;
+}
+.follow{
+	width : 400px;
+	display:flex;
+	list-style : none;
+ 	justify-content: space-around;
+ 	align-items : flex-end;
+ 	font-size : 1.5em;
+}
+.type{
+	width : 80%; 
+	display : flex;
+	justify-content : center;
+}
+.icon{
+	margin-right : 20px;
+	margin-left : 20px;
+}
+.board{
+	width : 80%;
+	display : flex;
+	flex-wrap: wrap;
+	justify-content : center;
+	margin-top : 20px;
+}
+.board-picture{
+	width : 250px;
+	height : 250px;
+	margin : 10px;
+}
+
