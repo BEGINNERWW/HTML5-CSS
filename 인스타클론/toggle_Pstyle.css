@@ -6,6 +6,9 @@ a {
   text-decoration: none;
   color: #212121;
 }
+.fa{
+	border :10px;
+}
 .newpost {
   width: 500px;
   height: 100px;
@@ -42,11 +45,13 @@ a {
 .upload {
   align-items: center;
   margin-top: 5px;
+  margin-left:-160px;
 }
 .text1 {
+  height:50px;
   margin: auto;
   margin-top: 20px;
-  padding-left: 20px;
+  margin-left:-40px;
   border: none;
 }
 .tag {
@@ -61,7 +66,7 @@ a {
   border-width: 2px;
   font-size: 1.2em;
 }
-.loc {
+.loc, .account {
   width: 500px;
   margin: auto;
   padding-top: 10px;
@@ -69,6 +74,47 @@ a {
   display: flex;
   justify-content: space-between;
   font-size: 1.2em;
+}
+.account{
+  flex-direction:column;
+  border-bottom: solid;
+  border-color: #eeeeee;
+  border-width: 2px;
+}
+.acc_align{
+	display:flex;
+	justify-content:flex-start;
+}
+.none_account1{
+  width :500px;
+  margin:auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display:flex;
+  flex-direction:row;
+  justify-content : space-between;
+  font-size: 1em;
+}
+.none_account{
+  width :500px;
+  margin-top:10px;
+  margin-left:10px;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  font-size: 1em;
+}
+.account1{
+  display:block;
+  width: 60px;
+  height: 50px;
+  margin-bottom:10px;
+  border-radius: 70%;
+  overflow: hidden;	
+  border: 1px solid #eceff1;
+}
+#acc_align1{
+  display:flex;
 }
 .loc_tag {
   width: 500px;
@@ -111,4 +157,84 @@ a {
   border-radius: 14px;
   border: none;
   overflow: hidden;
+}
+.interlock {
+  width: 500px;
+  margin: auto;
+  margin-bottom:20px;
+  padding-bottom:15px;
+  display: flex;
+  flex-direction:column;
+  justify-content: space-between;
+  font-size: 1.2em;
+  border-bottom: solid;
+  border-color: #eeeeee;
+  border-width: 2px;
+}
+.list {
+  width : 500px;
+  margin:auto;
+  margin-top:15px;
+  list-style:none;
+  display : flex;
+  flex-direction:row;
+  justify-content : space-between;
+}
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
