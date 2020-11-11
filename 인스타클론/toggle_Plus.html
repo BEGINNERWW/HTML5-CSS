@@ -4,13 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>새 게시물</title>
-    <link rel="stylesheet" href ="toggle_style.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Annie+Use+Your+Telescope&family=Fredericka+the+Great&family=Handlee&family=Stylish&family=Yeon+Sung&display=swap" rel="stylesheet">    <script src="https://kit.fontawesome.com/e86c67650d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href ="toggle_Pstyle.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Annie+Use+Your+Telescope&family=Fredericka+the+Great&family=Handlee&family=Stylish&family=Yeon+Sung&display=swap" rel="stylesheet">    
+  <!--  <script src="https://kit.fontawesome.com/e86c67650d.js" crossorigin="anonymous"></script> -->
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('#toggle_acc').click( function(){
+			$('#acc_align').toggle();
+
+	    	$(this).children().toggleClass( 'fa-angle-down').toggleClass( 'fa-angle-up');
+		});
+	});
+	</script>
 </head>
 <body>
     <div id="container">
     <header class ="newpost"> 
-        <div class="back"><a href="carsta.html"><i class="fas fa-angle-left"></i></a></div>
+        <div class="back"><a href="carsta.html"><i class="fa fa-angle-left"></i></a></div>
         <div class ="title">새 게시물</div>
         <div class ="post"><a href="#">공유</a></div>
     </header>
@@ -20,11 +32,11 @@
     </div>
     <div class ="tag">
         <span>사람 태그하기</span>
-        <span><a href="#"><i class="fas fa-angle-right"></i></a></span>
+        <span><a href="#"><i class="fa fa-angle-right"></i></a></span>
     </div>
         <div class="loc">
             <span>위치 추가</span>
-            <span><a href="#"><i class="fas fa-angle-right"></i></a></span>
+            <span><a href="#"><i class="fa fa-angle-right"></i></a></span>
         </div>
         <div class="loc_tag">
             <button class="tag_style1">서울</button>
@@ -32,28 +44,56 @@
             <button class="tag_style3">중랑천 자전거도로</button>
             <button class="tag_style4">면목동 어디선가</button>
         </div>
-    <div class ="accoun">
-        <ul>
-            <li>다른 계정에 게시</li>
-            <li><i class="fas fa-angle-up"></i></li>
-        </ul>
+    <div class ="account">
+    		<span class="none_account1">
+            	<span>다른 계정에 게시</span>
+            	<span ><a id="toggle_acc" href="#"><i onclick="change(this)" class="fa fa-angle-down"></i></a></span>
+    		</span>
+    		<div id="acc_align">
+    		<span id="acc_align1">
+    			<img class="account1" src="치맥.jpg" align="left">
+            	<span class="none_account"> 
+            		<span>cheeez___</span>
+            		<label class="switch">
+                	<input type="checkbox">
+                	<span class="slider round"></span>
+            		</label>
+            	</span>
+            </span>
+            <span id="acc_align1">
+            	<img class="account1" src="피자.jpeg" align="left">
+	            <span class="none_account">
+    	        	<span>geurae_c</span>
+        	    	<label class="switch">
+            	    <input type="checkbox">
+                	<span class="slider round"></span>
+            		</label>
+            	</span>
+            </span>
+            </div>
     </div>
     <div class ="interlock">
-        <ul>
-            <li>Facebook</li>
-            <li><label class="switch">
+        <span class="list">
+            <span>Facebook</span>
+            <label class="switch">
                 <input type="checkbox">
                 <span class="slider round"></span>
-            </label></li>
-        </ul>
-        <ul>
-            <li>Twitter</li>
-            <li><label class="switch">
+            </label>
+        </span>
+        <span class="list">
+            <span>Twitter</span>
+            <label class="switch">
                 <input type="checkbox">
                 <span class="slider round"></span>
-            </label></li>
-        </ul>
-        <hr color ="#eeeeee" >
+            </label>
+        </span>
+        <span class="list">
+            <span>Tumblr</span>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </span>
     </div>
     </div>
 </body>
